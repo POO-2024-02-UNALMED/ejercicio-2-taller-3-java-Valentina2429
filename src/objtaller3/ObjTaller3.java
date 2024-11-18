@@ -1,8 +1,8 @@
 package objtaller3;
 
-import compras.OrdenCompra;
+import compras.*;
 import gestionHumana.Empleado;
-import compras.Producto;
+import java.util.ArrayList;
 
 public class ObjTaller3 {
 
@@ -16,11 +16,11 @@ public class ObjTaller3 {
         ArrayList<Producto> productos1 = new ArrayList<>();
         productos1.add(p1);
         productos1.add(p3);
-        OrdenCompra orden1 = new OrdenCompra(**, "Aseo", emp1, productos1);
+        OrdenCompra orden1 = new OrdenCompra(101, "Aseo", emp1, productos1);
         System.out.println(Producto.getTotalProductosPedidos());
         orden1.agregarProducto(p4);
         System.out.println(Producto.getTotalProductosPedidos());
-        orden1.**(p5);
+        orden1.agregarProducto(p5);
         System.out.println(Producto.getTotalProductosPedidos());
         System.out.println("Orden " + orden1.codigo + " creada");
 
@@ -33,7 +33,7 @@ public class ObjTaller3 {
         System.out.println(emp2.cedula + " va a retirar producto");
         orden2.retirarProducto(emp2, p4);
         System.out.println(Producto.getTotalProductosPedidos());
-        orden2.retirarProducto(**, p2);
+        orden2.retirarProducto(emp1, p2);
         System.out.println(Producto.getTotalProductosPedidos());
     }
 }
